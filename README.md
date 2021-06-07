@@ -4,11 +4,13 @@ This is a fork of the YDNS Bash Updater Script found here (https://github.com/yd
 
 The intent of this script is to use and provide a more simplistic method for users who are unfamiliar with Linux to utilize YDNS by attempting to prevent possible errors that may arise. This script also only uses IPv4 in case of errors resulting from a lack of IPv6 support.
 
-## Tutorial
+## Tutorial for Windows 10
 
-This script was tested to work on Linux Mint 20.1 and Windows 10 (20H2) using Windows Subsystem for Linux under Debian.
+This script was tested to work on Windows 10 Home (20H2) using Windows Subsystem for Linux under Debian.
 
-First, ensure that your host has [curl](http://curl.haxx.se) installed.
+1) Download and run the file "InstallLinuxSubsystem.cmd" as an Administrator
+  Alternatively, you may run Command Prompt as an Administrator and paste the following line:
+  DISM /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux
 
 1. Check out the source code (updater.sh)
 2. Place it into desired place and make it executable (`chmod +x updater.sh`)
