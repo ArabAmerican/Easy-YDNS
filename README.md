@@ -1,10 +1,12 @@
-# YDNS Bash Updater Script
+# Simple IPv4 YDNS Bash Updater (NOT COMPLETE, DO NOT USE)
 
-This repository contains the bash updater script which can be used on *NIX-like environments to update dynamic hosts. It is recommended to use this script with cronjob to run periodically (preferrably every 15 minutes).
+This is a fork of the YDNS Bash Updater Script found here (https://github.com/ydns/bash-updater)
 
-The script uses the YDNS API v1 (dyn-compatible).
+The intent of this script is to use and provide a more simplistic method for users who are unfamiliar with Linux to utilize YDNS by attempting to prevent possible errors that may arise. This script also only uses IPv4 in case of errors resulting from a lack of IPv6 support.
 
-## Installation
+## Tutorial
+
+This script was tested to work on Linux Mint 20.1 and Windows 10 (20H2) using Windows Subsystem for Linux under Debian.
 
 First, ensure that your host has [curl](http://curl.haxx.se) installed.
 
