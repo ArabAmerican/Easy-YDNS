@@ -1,4 +1,4 @@
-# Simple IPv4 DDNS using YDNS (NOT COMPLETE, DO NOT USE)
+# Easy DDNS using YDNS (NOT COMPLETE, DO NOT USE)
 
 This is a fork of the YDNS Bash Updater Script found here (https://github.com/ydns/bash-updater)
 
