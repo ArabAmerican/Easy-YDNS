@@ -8,9 +8,15 @@ The intent of this script is to use and provide a more simplistic method for use
 
 This script was tested to work on Windows 10 Home (20H2) using Windows Subsystem for Linux under Debian.
 
-1) Download and run the file "InstallLinuxSubsystem.cmd" as an Administrator
-  Alternatively, you may run Command Prompt as an Administrator and paste the following line:
-  DISM /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux
+1) Download and run the file "InstallLinuxSubsystem.cmd" as an Administrator (right-click and select Run as Administrator)
+
+	Alternatively, you may run Command Prompt as an Administrator and paste the following line:
+
+		DISM /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux
+		
+	If done correctly, Command Prompt should leave the message:
+	
+		The operation completed successfully.
 
 1. Check out the source code (updater.sh)
 2. Place it into desired place and make it executable (`chmod +x updater.sh`)
