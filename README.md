@@ -8,21 +8,18 @@ The intent of this script is to use and provide a more simplistic method for use
 
 This script was tested to work on Windows 10 Home (20H2) using Windows Subsystem for Linux under Debian.
 
-1) Download and run the file "InstallLinuxSubsystem.cmd" as an Administrator (right-click and select Run as Administrator)
+1) Download and extract the files from the .zip folder, and run the file "InstallLinuxSubsystem.cmd" 
+
+	(Right-click and select "**Run as administrator**", otherwise error 740 will appear)
 
 	Alternatively, you may run Command Prompt as an Administrator and paste the following line:
 
 		DISM /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux
 		
-	If done correctly, Command Prompt should leave the message:
+	If done correctly, Command Prompt should ask you to restart. Restart and continue to step 2.
 	
-		The operation completed successfully.
-
-1. Check out the source code (updater.sh)
-2. Place it into desired place and make it executable (`chmod +x updater.sh`)
-3. Edit the script and update the user and host information to fit your configuration
-4. Run the script (either by single call or set up a cronjob to run it periodically)
-
+2)
+	
 ## Crontab Setup
 
 To run this script every 15 minutes using `crontab`, add the following line to your crontab list:
