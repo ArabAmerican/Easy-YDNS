@@ -6,13 +6,11 @@ The purpose of this simple script is to check and update the IP stored in YDNS t
 
 In other words, it's a DDNS using YDNS. 
 
-The intent of this fork is to provide a more simplistic method for users who are unfamiliar with Linux to utilize YDNS by attempting to prevent possible errors that may arise. This script also only uses IPv4 in case of errors resulting from a lack of IPv6 support.
+The intent of this fork is to provide a more simplistic method for users who are unfamiliar with Linux to utilize YDNS by attempting to prevent possible errors that may arise. This script also only uses IPv4 in case of errors resulting from a lack of IPv6 support. Before beginning, you must create an account on https://ydns.io/ and create a host for yourself (example.ydns.eu)
 
-Before beginning, you must create an account on https://ydns.io/ and create a host for yourself (example.ydns.eu)
+This script was tested to work on Linux Mint 20.1 and Windows 10 Home (20H2) using Windows Subsystem for Linux under Debian. The tutorial below will guide you through installing and creating a proper script to allow you to update YDNS.
 
-This script was tested to work on Windows 10 Home (20H2) using Windows Subsystem for Linux under Debian. The tutorial below will guide you through installing and creating a proper script to allow you to update YDNS.
-
-If you are just using Debian without Windows, you may skip to step 3.
+If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you may skip to step 3.
 ## Steps for Windows 10 users
 
 1) Download and extract the files from the .zip folder, and run the file "InstallLinuxSubsystem.cmd" 
@@ -32,6 +30,9 @@ If you are just using Debian without Windows, you may skip to step 3.
 	When you run it for the first time, it will ask you to create a username and password. You can set this to whatever you like, but do not forget the password as you will need it later. If you see a terminal window with a line at something like "username@laptopname:~$" proceed to step 3.
 	
 ## Using Terminal
+
+
+
 ## Crontab Setup
 
 To run this script every 15 minutes using `crontab`, add the following line to your crontab list:
