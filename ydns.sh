@@ -56,4 +56,10 @@ check() {
 		update
 	fi
 }
-main
+while true; do 
+	echo "Last check was performed on "
+	date
+	main
+	sleep 15m
+	#You can change how often the script checks for a changed IP here! By default, it is set to 15m, meaning every 15 minutes
+done
