@@ -22,9 +22,12 @@ secret="PASTE_SECRET"
 host="example.ydns.eu" 
 #Enter the name of the host address you'd like to update here
 
+interval="15m"
+#You can change how often the script checks for a changed IP here! By default, it is set to 15m, meaning every 15 minutes
+
 #You no longer need to edit the script past this point!
 #Once you've entered the username, secret, and host,
-#you may now save and run the script
+#you may now attempt save and run the script
 
 update() {
       
@@ -78,6 +81,6 @@ check() {
 while true; do 
 	echo
 	main
-	sleep 15m
-	#You can change how often the script checks for a changed IP here! By default, it is set to 15m, meaning every 15 minutes
+	echo "Next check will occur in "$interval
+	sleep $interval
 done
