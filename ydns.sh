@@ -28,9 +28,21 @@ host="example.ydns.eu"
 
 update() {
       
-    update=`curl -s --user $username:$secret https://ydns.io/api/v1/update/?host=${host}\&ip=${ipv4}`
+    update=$(curl --write-out %{http_code} --silent -output --user $username:$secret https://ydns.io/api/v1/update/?host=${host}\&ip=${ipv4})
     echo $host" has been pushed to update from "$hostip" to "$ipv4
-
+	
+	if [ $update == 200 ]; then
+		echo "YDNS update was successful"
+	elif [ $update == 404 ]; then
+		echo "YDNS Host Error. The host was either not found or authorized"
+	elif [ $update == 401 ]; then
+		echo "YDNS Login Error. Please check username and secret"
+	elif [ $update == 400 ]; then
+		echo "YDNS rejected request. Please check login and host parameters"
+	else
+		echo "YDNS update failed. HTTP Error: "$update
+		curl -s --user $username:$secret https://ydns.io/api/v1/update/?host=${host}\&ip=${ipv4}
+	fi
 }
 
 main() {
@@ -57,8 +69,10 @@ check() {
 	fi
 }
 while true; do 
+	echo
 	echo "Last check was performed on "
 	date
+	echo
 	main
 	sleep 15m
 	#You can change how often the script checks for a changed IP here! By default, it is set to 15m, meaning every 15 minutes
