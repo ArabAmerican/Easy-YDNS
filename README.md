@@ -43,7 +43,7 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 	If done correctly, a lot of messages will appear. Don't worry, this setup script is installing assigning necessary permissions, updating repositories, and installing cURL and DNSutils so that YDNS can function. After one minute, a message should appear.
 	
 		Done.
-6) Next, we will open ydns.sh and modify some of the variables inside the script (you can open it with Notepad)
+6) Next, we will open ydns.sh and modify some of the variables inside the script (you can open it with any text editor, such as Notepad)
 	As it states, go to http://ydns.io/user/api and locate the API username and secret.
 		If you haven't created an account on YDNS yet, this is the time to do so.
 	Copy the username and secret and replace it with PASTE_USERNAME & PASTE_SECRET respectively. It should look something like this once you paste them:
