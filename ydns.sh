@@ -19,7 +19,7 @@ username="PASTE_USERNAME"
 secret="PASTE_SECRET" 
 #Enter your API Secret here
 
-host="testingworks.ydns.eu" 
+host="example.ydns.eu" 
 #Enter the name of the host address you'd like to update here
 
 #You no longer need to edit the script past this point!
