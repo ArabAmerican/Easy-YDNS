@@ -66,6 +66,6 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 Congratulations! You've updated the IP address onto YDNS!
 ## Changing the script to run every X minutes
 
-By default, the script is set to refresh every 15 minutes to check for a new IP. You can change this by editing line 77 to the interval you'd like to set. 
+By default, the script is set to refresh every 15 minutes to check for a new IP. You can change this by editing the sleep command to the interval you'd like to set. This can be found at the end of the script.
 
 		sleep 15m
