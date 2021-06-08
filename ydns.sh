@@ -46,12 +46,19 @@ update() {
 }
 
 main() {
-
+	echo "Last check was performed on "
+	date
+	echo
 	ipv4=$(curl -s --ipv4 https://ydns.io/api/v1/ip)
     
     if [ -z $ipv4 ]; then
         echo "IPv4 address retrieval failed"
         echo "Hint: Is your device connected to the internet?"
+		sleep 3s
+		echo "Attempting to recheck in 15 seconds..."
+		sleep 15s
+		echo
+		main
     else
         echo -n "Your current IPv4 address is "
         echo $ipv4
@@ -69,9 +76,6 @@ check() {
 	fi
 }
 while true; do 
-	echo
-	echo "Last check was performed on "
-	date
 	echo
 	main
 	sleep 15m
