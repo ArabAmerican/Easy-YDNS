@@ -28,25 +28,30 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 	https://www.microsoft.com/en-us/p/debian/9msvkqc78pk6
 	
 	When you run it for the first time, it will ask you to create a username and password. You can set this to whatever you like, but do not forget the password as you will need it later. Once you see a terminal window with a line at something like "username@laptopname:~$" proceed to step 3.
-	
+
 ## Using Terminal (for Linux & Windows 10)
 
-3) Drag the files "setup.sh" and "YDNS.sh" from the extracted zip folder to the Desktop (or move it somewhere that you can reference later)
+3) Drag the files "setup.sh" and "ydns.sh" from the extracted zip folder to the Desktop (or move it somewhere that you can reference later)
 4) In terminal, set the directory to the location of the files you just moved. An example is listed below if the files are moved to the desktop.
 
 		username@laptopname:~$ cd /mnt/c/users/**YourWindowsUsername**/Desktop
-5) Then, run the setup script. This can be done by typing this into terminal:
+		
+5) Then, run the setup script. This only needs to be done once. This can be done by typing this into terminal:
 
 		./setup.sh
+		
 	This will ask you for the password you made earlier, type that in and hit enter.
 	
 	If done correctly, a lot of messages will appear. Don't worry, this setup script is installing assigning necessary permissions, updating repositories, and installing cURL and DNSutils so that this script can function. After one minute, a message should appear.
 	
 		Done.
-6) Next, we will open ydns.sh and modify some of the variables inside the script (you can open it with any text editor, such as Notepad)
-	As it states, go to http://ydns.io/user/api and locate the API username and secret.
+		
+## Editing ydns.sh
+
+6) Next, we will open ydns.sh and enter your login and host inside the script (you can open it with any text editor, such as Notepad)
+	Go to http://ydns.io/user/api and locate the API username and secret.
 		If you haven't created an account on YDNS yet, this is the time to do so.
-	Copy the username and secret and replace it with PASTE_USERNAME & PASTE_SECRET respectively. It should look something like this once you paste them:
+	a) Copy the username and secret and replace it with PASTE_USERNAME & PASTE_SECRET respectively. It should look something like this once you paste them:
 	
 		username="fFDHGF4df46Fg35F" 
 		#Enter your API Username here
@@ -54,18 +59,17 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 		secret="gfdY563DSGryhETRe" 
 		#Enter your API Secret here
 
-7) Choose the hostname that you are using from your YDNS account and replace it with PASTE_LINK. It should look similar to this:
+	b) Choose the hostname that you are using from your YDNS account and replace it with PASTE_LINK. It should look similar to this:
 
 		host="githubexample.ydns.eu" 
 		#Enter the name of the host address you'd like to update here
+		
+	c) Choose how often you'd like the script to check for an IP change.
 
-8) Save the file and run it in terminal
+		interval="15m"
+		#You can change how often the script checks for a changed IP here! By default, it is set to 15m, meaning every 15 minutes
+
+7) Save your edits and run ydns.sh in terminal. You can do this by typing:
 
 		./ydns.sh
 		
-Congratulations! You've updated the IP address onto YDNS!
-## Changing the script to run every X minutes
-
-By default, the script is set to refresh every 15 minutes to check for a new IP. You can change this by editing the sleep command to the interval you'd like to set. This can be found at the end of the script.
-
-		sleep 15m
