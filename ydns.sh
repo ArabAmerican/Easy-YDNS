@@ -47,7 +47,7 @@ update() {
 
 main() {
 
-	ipv4=`curl -s --ipv4 https://ydns.io/api/v1/ip`
+	ipv4=$(curl -s --ipv4 https://ydns.io/api/v1/ip)
     
     if [ -z $ipv4 ]; then
         echo "IPv4 address retrieval failed"
@@ -60,7 +60,7 @@ main() {
 }
 
 check() {
-    hostip=`dig +short $host`
+    hostip=$(dig +short $host)
 	if [ $ipv4 == $hostip ]; then
 		echo $host stores "("$hostip")"
 		echo "No update is performed because the addresses are the same"
