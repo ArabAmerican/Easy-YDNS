@@ -1,4 +1,4 @@
-# Easy DDNS using YDNS (Not Complete)
+# Easy DDNS with YDNS (using Linux or Windows 10)
 
 This is a fork of the YDNS Bash Updater Script found here (https://github.com/ydns/bash-updater)
 
@@ -63,8 +63,9 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 
 		./ydns.sh
 		
-Congratulations! You've made it to the end! Run the ydns.sh script everytime you'd like to update the IP address. 
-
+Congratulations! You've updated the IP address onto YDNS!
 ## Allowing the script to run every X minutes
 
-This tutorial is incomplete, I will come back tomorrow.
+By default, the script is set to refresh every 15 minutes to check for a new IP. You can change this by editing line 63 to the interval you'd like to set. 
+
+		sleep 15m
