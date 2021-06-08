@@ -24,7 +24,7 @@ host="example.ydns.eu"
 
 #You no longer need to edit the script past this point!
 #Once you've entered the username, secret, and host,
-#you may now attempt to run the script
+#you may now save and run the script
 
 update() {
       
