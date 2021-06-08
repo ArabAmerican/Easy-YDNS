@@ -40,7 +40,7 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 		./setup.sh
 	This will ask you for the password you made earlier, type that in and hit enter.
 	
-	If done correctly, a lot of messages will appear. Don't worry, this setup script is installing assigning necessary permissions, updating repositories, and installing cURL and DNSutils so that YDNS can function. After one minute, a message should appear.
+	If done correctly, a lot of messages will appear. Don't worry, this setup script is installing assigning necessary permissions, updating repositories, and installing cURL and DNSutils so that this script can function. After one minute, a message should appear.
 	
 		Done.
 6) Next, we will open ydns.sh and modify some of the variables inside the script (you can open it with any text editor, such as Notepad)
@@ -64,7 +64,7 @@ If you are using a Linux distribution such as Ubuntu, Mint, Debian, etc., you ma
 		./ydns.sh
 		
 Congratulations! You've updated the IP address onto YDNS!
-## Allowing the script to run every X minutes
+## Changing the script to run every X minutes
 
 By default, the script is set to refresh every 15 minutes to check for a new IP. You can change this by editing line 63 to the interval you'd like to set. 
 
