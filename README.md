@@ -43,7 +43,7 @@ Now we need to make sure that terminal will be able to run the script we give it
 		
 5) Then, run the setup script. This can be done by typing this into terminal:
 
-		./setup.sh
+		sudo bash ./setup.sh
 		
 	This will ask you for the password you made earlier, type that in and hit enter. If done correctly, a lot of messages will appear. Don't worry, after a minute or so, a message should appear.
 	
